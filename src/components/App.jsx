@@ -1,16 +1,21 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework
-    </div>
-  );
-};
+import { Statistics } from './Statistics/Statistics';
+import React from 'react';
+export class App extends React.Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
+
+  countTotalFeedback() {}
+
+  countPositiveFeedbackPercentage() {}
+
+  render() {
+    return (
+      <div>
+        <Statistics />
+      </div>
+    );
+  }
+}
